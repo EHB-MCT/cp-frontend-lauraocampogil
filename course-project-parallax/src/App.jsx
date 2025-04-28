@@ -10,7 +10,7 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<>
+		/*<>
 			<h1>React Router Demo</h1>
 			<BrowserRouter>
 				<Routes>
@@ -21,7 +21,10 @@ function App() {
 					</Route>
 				</Routes>
 			</BrowserRouter>
-		</>
+		</>*/
+		<div className="App">
+			<a href="#">THIS IS A LINK</a>
+		</div>
 	);
 }
 
