@@ -9,6 +9,7 @@ body {
 	background-image: url("./assets/Images-web/background_image.png");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 .logo {
 	width: 100px;
@@ -18,17 +19,11 @@ body {
 	left: 20px;
 	padding-bottom: 50px;
 }
-.logo-footer {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}
 h1 {
 	font-family: "Bungee", cursive;
-	text-align: center;
+	text-align: left;
 	color: black;
+	font-size: 24px;
 }
 h3 {
 	font-family: "Bungee", cursive;
@@ -54,20 +49,139 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-}
-.menu-item {
 	padding: 20px;
 	margin: 10px;
 	width: 200px;
-	text-align: center;
 	transition: transform 0.2s;
 }
-.menu-item:hover {
+.menu:hover {
 	transform: scale(1.05);
 	text-decoration: underline 2px solid crimson;
+}
+
+.fairy-tale-text h2 {
+	font-family: "Lato", sans-serif;
+	text-align: left;
+	color: black;
+	font-size: 16px;
+	font-weight: 900;
 }
 .fairy-tale-text p {
 	font-family: "Lato", sans-serif;
 	text-align: left;
+	color: #767676;
+	font-size: 16px;
+	font-weight: bold;
+}
+.fairy-tales-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.fairy-tales-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
+	margin-bottom: 40px;
+}
+.fairy-tale {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.fairy-tale img {
+	width: 270px;
+	height: 410px;
+	border-radius: 8px;
+	transition: transform 0.3s;
+}
+.fairy-tale-button {
+	position: relative;
+	bottom: 10px;
+	left: 50%;
+	right: 10px;
+	width: 36px;
+	height: 36px;
+	background-color: #e63946;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	width: 100%;
+	background-color: white;
+}
+.footer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 10px;
+	width: 100%;
+}
+.logo-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	bottom: 20px;
+	right: 20px;
+}
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 10px;
+	width: 100%;
+}
+.about-container h3 {
+	font-family: "Bungee", cursive;
+	text-align: left;
 	color: black;
+	font-size: 24px;
+}
+.about-container p {
+	font-family: "Lato", sans-serif;
+	text-align: left;
+	color: black;
+	font-size: 16px;
+}
+.links-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	margin: 10px;
+	width: 100%;
+}
+.links-container h3 {
+	font-family: "Bungee", cursive;
+	text-align: left;
+	color: black;
+	font-size: 24px;
+}
+.links-container a {
+	font-family: "Lato", sans-serif;
+	text-align: left;
+	color: black;
+	font-size: 16px;
+	display: flex;
 }
