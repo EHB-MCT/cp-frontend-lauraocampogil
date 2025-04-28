@@ -3,4 +3,5 @@
 [Multiple pages using router - components explained]-(https://www.youtube.com/watch?v=TWz4TjSssbg)
 [Custom cursor]-(https://www.youtube.com/watch?v=MMOvm48l_CU)
 [Custom cursor with framer motion]-(https://www.youtube.com/watch?v=nr3U-RpaQuM)
-[Custom cursor animation for gliters of tinkerbell]-(https://www.youtube.com/watch?v=WbCtwdlFf0M)
+[YT VIDEO: Custom cursor animation for gliters of tinkerbell]-(https://www.youtube.com/watch?v=WbCtwdlFf0M)
+[CURSIFY LINK: Custom cursor animation for gliters of tinkerbell]-(https://cursify.vercel.app/components/snowflake-cursor)
