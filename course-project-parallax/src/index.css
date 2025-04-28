@@ -66,3 +66,8 @@ a {
 	transform: scale(1.05);
 	text-decoration: underline 2px solid crimson;
 }
+.fairy-tale-text p {
+	font-family: "Lato", sans-serif;
+	text-align: left;
+	color: black;
+}
