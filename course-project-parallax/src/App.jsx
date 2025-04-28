@@ -8,9 +8,11 @@ import FairydustCursor from "./components/FairydustCursor.jsx";
 function App() {
 	return (
 		<>
-			<FairydustCursor />
-			<Header />
-			<Footer />
+			<div className="fairy-cursor">
+				<FairydustCursor />
+				<Header />
+				<Footer />
+			</div>
 		</>
 	);
 }
