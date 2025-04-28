@@ -1,5 +1,9 @@
 function Header() {
-	return <h1>Header</h1>;
+	return (
+		<header>
+			<h1>Parallax Website</h1>
+		</header>
+	);
 }
 
 export default Header;
