@@ -1,133 +1,133 @@
 [
 	{
 		"id": 1,
-		"image": "./assets/covers/the_fairy_boy.jpg",
+		"image": "images/The_fairy_boy.jpg",
 		"title": "THE FAIRY BOY OF LEITH",
 		"name": "Jordi De Leeuw"
 	},
 	{
 		"id": 2,
-		"image": "./assets/covers/the_fairy_boy.jpg",
-		"title": "THE FAIRY BOY OF LEITH",
+		"image": "images/Red_hood.jpg",
+		"title": "LITTLE RED RIDING HOOD",
 		"name": "Pema Bhutia"
 	},
 	{
 		"id": 3,
-		"image": "./assets/covers/Red_hood.jpg",
+		"image": "images/Red_hood.jpg",
 		"title": "LITTLE RED RIDING HOOD",
 		"name": "Sophia Rahmoun"
 	},
 	{
 		"id": 4,
-		"image": "./assets/covers/blauwbaard.jpg",
+		"image": "images/blauwbaard.jpg",
 		"title": "BLAUWBAARD",
 		"name": "Wout Van Impe"
 	},
 	{
 		"id": 5,
-		"image": "./assets/covers/De_Kleine_Zeemeermin.webp",
+		"image": "images/De_Kleine_Zeemeermin.webp",
 		"title": "DE KLEINE ZEEMEERMIN",
 		"name": "Sam Hoeterickx"
 	},
 	{
 		"id": 6,
-		"image": "./assets/covers/Princes_Kaguya.jpg",
+		"image": "images/Princes_Kaguya.jpg",
 		"title": "PRINCES KAGUYA",
 		"name": "Manal Boulahya"
 	},
 	{
 		"id": 7,
-		"image": "./assets/covers/Aladdin.jpg",
+		"image": "images/Aladdin.jpg",
 		"title": "ALADIN EN DE WONDERLAMP",
 		"name": "Younes Ben Ali"
 	},
 	{
 		"id": 8,
-		"image": "./assets/covers/Hans_en_Grietje.jpg",
+		"image": "images/Hans_en_Grietje.jpg",
 		"title": "HANS EN GRIETJE",
 		"name": "Arno Baeck"
 	},
 	{
 		"id": 9,
-		"image": "./assets/covers/Hercules.jpg",
+		"image": "images/Hercules.jpg",
 		"title": "HERCULES",
 		"name": "Rey Mammadbeyli"
 	},
 	{
 		"id": 10,
-		"image": "./assets/covers/3-biggetjes.jpg",
+		"image": "images/3-biggetjes.jpg",
 		"title": "DE 3 BIGGETJES",
 		"name": "Ramon de Raes"
 	},
 	{
 		"id": 11,
-		"image": "./assets/covers/Peter_Pan.jpg",
+		"image": "images/Peter_Pan.jpeg",
 		"title": "PETER PAN",
 		"name": "Laura Ocampo"
 	},
 	{
 		"id": 12,
-		"image": "./assets/covers/Raaf_en_de_vos.jpg",
+		"image": "images/Raaf_en_de_vos.jpg",
 		"title": "DE RAAF EN DE VOS",
 		"name": "Matteo Giambarresi"
 	},
 	{
 		"id": 13,
-		"image": "./assets/covers/Beauty_Beast.jpg",
+		"image": "images/Beauty_Beast.jpeg",
 		"title": "BEAUTY AND THE BEAST",
 		"name": "Nordine El Ouafrasi"
 	},
 	{
 		"id": 14,
-		"image": "./assets/covers/Raponsje.jpg",
+		"image": "images/Raponsje.jpg",
 		"title": "RAPONSJE",
 		"name": "Joel Lopez Mendez"
 	},
 	{
 		"id": 15,
-		"image": "./assets/covers/waternimf.jpg",
+		"image": "images/waternimf.png",
 		"title": "DE WATERNIMF IN DE VIJVER",
 		"name": "Nina Breedstraet"
 	},
 	{
 		"id": 16,
-		"image": "./assets/covers/wonderful-wizard.jpg",
+		"image": "images/wonderful-wizard.jpg",
 		"title": "THE WONDERFUL WIZARD OF OZ",
 		"name": "Luca Lattuca"
 	},
 	{
 		"id": 17,
-		"image": "./assets/covers/Rapunzel.jpg",
+		"image": "images/Rapunzel.jpg",
 		"title": "RAPUNZEL",
 		"name": "Fleur Van De Ville"
 	},
 	{
 		"id": 18,
-		"image": "./assets/covers/vuurvogel.jpg",
+		"image": "images/vuurvogel.jpg",
 		"title": "DE VUURVOGEL",
 		"name": "Beatrice Bjoko"
 	},
 	{
 		"id": 19,
-		"image": "./assets/covers/Duimelijntje.jpg",
+		"image": "images/Duimelijntje.jpg",
 		"title": "DUIMELIJNTJE",
 		"name": "Siriyakorn Klaklang"
 	},
 	{
 		"id": 20,
-		"image": "./assets/covers/wolf_zeven_geitjes.jpg",
+		"image": "images/wolf_zeven_geitjes.jpg",
 		"title": "DE WOLF EN DE 7 GEITJES",
 		"name": "Ernest Marot"
 	},
 	{
 		"id": 21,
-		"image": "./assets/covers/Duimelijntje.jpg",
+		"image": "images/Duimelijntje.jpg",
 		"title": "DUIMELIJNTJE",
 		"name": "Maxim Westerbeek"
 	},
 	{
 		"id": 22,
-		"image": "./assets/covers/witte_slang.jpg",
+		"image": "images/witte_slang.jpeg",
 		"title": "DE KONING EN DE WITTE SLANG",
 		"name": "Seppe Ghekiere"
 	}

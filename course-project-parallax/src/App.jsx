@@ -12,14 +12,16 @@ function App() {
 			<div className="fairy-cursor">
 				<FairydustCursor />
 				<Header />
+				<div className="hero-title">
+					<h1>IN THE SPOTLIGHT</h1>
+				</div>
 
 				{Fairytales.map((fairytale) => {
 					return (
-						<div className="fairy-tales-wrapper">
-							<h1>IN THE SPOTLIGHT</h1>
+						<div className="fairy-tales-wrapper" key={fairytale.id}>
 							<div className="fairy-tales-grid">
 								<div className="fairy-tale">
-									<img src={fairytale.image} />
+									<img src={fairytale.image} alt="" />
 									<div className="fairy-tale-text">
 										<h2>{fairytale.title}</h2>
 										<p>{fairytale.name}</p>
