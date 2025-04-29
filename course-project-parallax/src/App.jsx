@@ -5,6 +5,7 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import FairydustCursor from "./components/FairydustCursor.jsx";
 import Fairytales from "./fairytale-data.json";
+import Searchbar from "./components/Searchbar.jsx";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<div className="fairy-cursor">
 				<FairydustCursor />
 				<Header />
+				<Searchbar />
 				<hr></hr>
 				<div className="hero-title">
 					<h1>IN THE SPOTLIGHT</h1>

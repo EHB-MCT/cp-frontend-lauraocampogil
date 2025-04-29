@@ -11,6 +11,10 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+.App {
+	height: 100vh;
+	width: 100vw;
+}
 .logo {
 	width: 100px;
 	height: 100px;
@@ -116,6 +120,51 @@ hr {
 	align-items: center;
 	color: white;
 	border: none;
+	cursor: pointer;
+}
+/*SearchBar*/
+.search-container {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+.dropdown {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+}
+.dropdown:empty {
+	border: none;
+}
+.dropdown-row {
+	cursor: pointer;
+	text-align: start;
+	margin: 2px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.search-inner {
+	display: flex;
+	justify-content: center;
+}
+.search-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	border-radius: 20px 0px 0px 20px;
+	background-color: white;
+	border: 2px solid black;
+	width: 80%;
+}
+.search-btn {
+	background-color: #e51131;
+	color: white;
+	border: 2px solid black;
+	border-radius: 0px 20px 20px 0px;
+	padding: 10px 20px;
 	cursor: pointer;
 }
 /*Footer*/
