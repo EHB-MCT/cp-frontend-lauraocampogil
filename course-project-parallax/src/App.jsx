@@ -12,15 +12,15 @@ function App() {
 			<div className="fairy-cursor">
 				<FairydustCursor />
 				<Header />
+				<hr></hr>
 				<div className="hero-title">
 					<h1>IN THE SPOTLIGHT</h1>
 				</div>
-
-				{Fairytales.map((fairytale) => {
-					return (
-						<div className="fairy-tales-wrapper" key={fairytale.id}>
-							<div className="fairy-tales-grid">
-								<div className="fairy-tale">
+				<div className="fairy-tales-wrapper">
+					<div className="fairy-tales-grid">
+						{Fairytales.map((fairytale) => {
+							return (
+								<div className="fairy-tale" key={fairytale.id}>
 									<img src={fairytale.image} alt="" />
 									<div className="fairy-tale-text">
 										<h2>{fairytale.title}</h2>
@@ -28,10 +28,10 @@ function App() {
 										<button className="fairy-tale-button">i</button>
 									</div>
 								</div>
-							</div>
-						</div>
-					);
-				})}
+							);
+						})}
+					</div>
+				</div>
 				<Footer />
 			</div>
 		</>
