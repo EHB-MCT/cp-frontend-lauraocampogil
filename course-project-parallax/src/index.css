@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
+/*root*/
 body {
 	margin: 0;
 	padding: 0;
@@ -63,13 +63,14 @@ hr {
 	transform: scale(1.05);
 	text-decoration: underline 2px solid crimson;
 }
-
+/*Homepage*/
 .fairy-tale-text h2 {
 	font-family: "Lato", sans-serif;
 	text-align: left;
 	color: black;
 	font-size: 16px;
 	font-weight: 900;
+	margin-bottom: 5px;
 }
 .fairy-tale-text p {
 	font-family: "Lato", sans-serif;
@@ -77,6 +78,7 @@ hr {
 	color: #767676;
 	font-size: 16px;
 	font-weight: bold;
+	margin-top: 5px;
 }
 .fairy-tales-wrapper {
 	max-width: 1200px;
@@ -101,11 +103,12 @@ hr {
 }
 .fairy-tale-button {
 	position: relative;
+	top: -60px;
 	bottom: 10px;
-	left: 50%;
+	left: 85%;
 	right: 10px;
-	width: 36px;
-	height: 36px;
+	width: 28px;
+	height: 28px;
 	background-color: #e63946;
 	border-radius: 50%;
 	display: flex;
@@ -115,6 +118,7 @@ hr {
 	border: none;
 	cursor: pointer;
 }
+/*Footer*/
 footer {
 	display: flex;
 	justify-content: center;
