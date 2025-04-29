@@ -1,8 +1,9 @@
 import Logo from "../assets/Images-web/Logo_ErWasEens.svg";
+import Searchbar from "./Searchbar";
 function Header() {
 	return (
 		<header>
-			<nav>
+			<nav className="navbar">
 				<div className="logo">
 					<img src={Logo}></img>
 				</div>
@@ -13,7 +14,9 @@ function Header() {
 
 					<a href="#">Making Of</a>
 				</div>
+				<Searchbar />
 			</nav>
+			<hr />
 		</header>
 	);
 }

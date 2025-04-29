@@ -15,20 +15,12 @@ body {
 	height: 100vh;
 	width: 100vw;
 }
-.logo {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	padding-bottom: 50px;
-}
 h1 {
 	font-family: "Bungee", cursive;
 	text-align: left;
 	color: black;
 	font-size: 24px;
-	margin-left: 20px;
+	margin: 40px 300px 20px;
 }
 h3 {
 	font-family: "Bungee", cursive;
@@ -48,24 +40,114 @@ a {
 }
 hr {
 	border: 2px solid black;
-	width: 90%;
+	margin-left: 19rem;
+	width: 60%;
+	margin-top: -40px;
 }
 .fairy-cursor {
 	cursor: url("./assets/Images-web/Tinkerbell-cursor.png") 50 50, auto;
 }
-.menu {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 20px;
-	margin: 10px;
-	width: 200px;
-	transition: transform 0.2s;
+/*header*/
+.navbar {
+	position: relative;
+	height: 180px;
+	padding-top: 20px;
 }
-.menu:hover {
-	transform: scale(1.05);
-	text-decoration: underline 2px solid crimson;
+.logo {
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 20px;
+	left: 300px;
+}
+.menu {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 10px;
+	display: flex;
+	gap: 22rem;
+}
+.menu a {
+	font-family: "Bungee", cursive;
+	color: black;
+	text-decoration: none;
+	font-size: 1rem;
+	position: relative;
+	font-weight: bold;
+}
+.menu a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: crimson;
+	transition: width 0.3s ease;
+}
+.menu a:hover::after {
+	width: 100%;
+}
+.menu a.active {
+	text-decoration: underline 2px solid red;
+}
+/*SearchBar*/
+.search-container {
+	position: absolute;
+	top: 100px;
+	left: 51%;
+	transform: translateX(-50%);
+	width: 80%;
+	max-width: 950px;
+}
+.dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: white;
+	border: 2px solid black;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	z-index: 100;
+	max-height: 300px;
+	overflow-y: auto;
+	margin-top: 0;
+}
+.dropdown:empty {
+	display: none;
+}
+.dropdown-row {
+	padding: 10px 15px;
+	cursor: pointer;
+	font-family: "Lato", sans-serif;
+}
+
+.dropdown-row:hover {
+	background-color: #f8f8f8;
+}
+
+.search-inner {
+	display: flex;
+	position: relative;
+}
+.search-box {
+	flex: 1;
+	padding: 10px 15px;
+	display: flex;
+	border-radius: 20px 0px 0px 20px;
+	background-color: white;
+	border: 2px solid black;
+}
+.search-btn {
+	background-color: #e51131;
+	color: white;
+	border: 2px solid black;
+	border-radius: 0px 20px 20px 0px;
+	padding: 12px 20px;
+	cursor: pointer;
 }
 /*Homepage*/
 .fairy-tale-text h2 {
@@ -122,51 +204,7 @@ hr {
 	border: none;
 	cursor: pointer;
 }
-/*SearchBar*/
-.search-container {
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-}
-.dropdown {
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	border: 2px solid black;
-}
-.dropdown:empty {
-	border: none;
-}
-.dropdown-row {
-	cursor: pointer;
-	text-align: start;
-	margin: 2px 0;
-	display: flex;
-	flex-direction: column;
-}
 
-.search-inner {
-	display: flex;
-	justify-content: center;
-}
-.search-box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	border-radius: 20px 0px 0px 20px;
-	background-color: white;
-	border: 2px solid black;
-	width: 80%;
-}
-.search-btn {
-	background-color: #e51131;
-	color: white;
-	border: 2px solid black;
-	border-radius: 0px 20px 20px 0px;
-	padding: 10px 20px;
-	cursor: pointer;
-}
 /*Footer*/
 footer {
 	display: flex;
