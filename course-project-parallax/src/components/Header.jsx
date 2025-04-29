@@ -1,5 +1,6 @@
 import Logo from "../assets/Images-web/Logo_ErWasEens.svg";
 import Searchbar from "./Searchbar";
+import { NavLink } from "react-router-dom";
 function Header() {
 	return (
 		<header>
@@ -8,11 +9,9 @@ function Header() {
 					<img src={Logo}></img>
 				</div>
 				<div className="menu">
-					<a href="#">Home</a>
-
-					<a href="#">Projects</a>
-
-					<a href="#">Making Of</a>
+					<NavLink to="/">Home</NavLink>
+					<NavLink to="/projects">Projects</NavLink>
+					<NavLink to="/makingof">Making Of</NavLink>
 				</div>
 				<Searchbar />
 			</nav>

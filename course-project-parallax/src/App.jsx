@@ -1,39 +1,22 @@
-import { useState } from "react";
-import "./App.css";
 import "./index.css";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import FairydustCursor from "./components/FairydustCursor.jsx";
-import Fairytales from "./fairytale-data.json";
-import Searchbar from "./components/Searchbar.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout.jsx";
+import Home from "./pages/Home.jsx";
+import Projects from "./pages/Projects.jsx";
+import MakingOf from "./pages/MakingOf.jsx";
 
 function App() {
 	return (
 		<>
-			<div className="fairy-cursor">
-				<FairydustCursor />
-				<Header />
-				<div className="hero-title">
-					<h1>IN THE SPOTLIGHT</h1>
-				</div>
-				<div className="fairy-tales-wrapper">
-					<div className="fairy-tales-grid">
-						{Fairytales.map((fairytale) => {
-							return (
-								<div className="fairy-tale" key={fairytale.id}>
-									<img src={fairytale.image} alt="" />
-									<div className="fairy-tale-text">
-										<h2>{fairytale.title}</h2>
-										<p>{fairytale.name}</p>
-										<button className="fairy-tale-button">i</button>
-									</div>
-								</div>
-							);
-						})}
-					</div>
-				</div>
-				<Footer />
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<Home />} />
+						<Route path="projects" element={<Projects />} />
+						<Route path="makingof" element={<MakingOf />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }

@@ -1,4 +1,5 @@
 import Logo from "../assets/Images-web/Logo_ErWasEens.svg";
+import { NavLink } from "react-router-dom";
 function Footer() {
 	return (
 		<footer>
@@ -13,11 +14,9 @@ function Footer() {
 				<div className="links-container">
 					<h3>Links</h3>
 					<div className="links">
-						<a href="#">HOME</a>
-
-						<a href="#">PROJECTS</a>
-
-						<a href="#">MAKING OF</a>
+						<NavLink to="/">Home</NavLink>
+						<NavLink to="/projects">Projects</NavLink>
+						<NavLink to="/makingof">Making Of</NavLink>
 					</div>
 				</div>
 			</div>
