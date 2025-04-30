@@ -1,4 +1,3 @@
-
 import Sounds from "../assets/Sounds/peter_pan_song.mp3";
 import { useState, useRef, useEffect } from "react";
 
@@ -27,7 +26,7 @@ function Sound() {
 	return (
 		<div className="play">
 			<button className="play-button" onClick={togglePlay}>
-				{isPlaying ? "Pause Music" : "Play Music"}
+				{isPlaying ? "Pause Music ⏸" : "Play Music ▶"}
 			</button>
 		</div>
 	);

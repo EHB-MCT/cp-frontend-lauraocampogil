@@ -10,3 +10,4 @@
 7. [CLAUDE: Seacrhbar suggestions with dropdownmenu problem fixed]-(https://claude.ai/chat/7b12c9cb-3f0e-49f2-b43a-408ac507b06b)
 8. [YT VIDEO: Play music button in Sound.jsx]-(https://www.youtube.com/watch?v=U1T_J6Odoqg)
 9. [CLAUDE: Fix the error from the YT VIDEO for the music play]-(https://claude.ai/chat/5657f08b-f8a8-4225-9ef5-deee95fb19a7)
+10. [CLAUDE: Hamburgermenu]-(https://claude.ai/chat/5ebbb0c2-70d0-4b5a-bc75-08f866fbb409)
