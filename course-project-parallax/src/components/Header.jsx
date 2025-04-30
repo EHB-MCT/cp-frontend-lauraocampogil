@@ -1,6 +1,6 @@
 import Logo from "../assets/Images-web/Logo_ErWasEens.svg";
 import Searchbar from "./Searchbar";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 function Header() {
 	return (
 		<header>
@@ -12,6 +12,10 @@ function Header() {
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/projects">Projects</NavLink>
 					<NavLink to="/makingof">Making-Of</NavLink>
+
+					<Link to="/parallax" target="_blank" rel="noopener noreferrer">
+						Parallax
+					</Link>
 				</div>
 				<Searchbar />
 			</nav>

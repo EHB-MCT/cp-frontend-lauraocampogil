@@ -4,11 +4,10 @@ import Fairytales from "../fairytale-data.json";
 function Home() {
 	return (
 		<>
-			<div className="fairy-cursor">
-				<FairydustCursor />
-				<div className="hero-title">
-					<h1>IN THE SPOTLIGHT</h1>
-				</div>
+			<FairydustCursor />
+			<div className="hero-title">
+				<h1>IN THE SPOTLIGHT</h1>
+
 				<div className="fairy-tales-wrapper">
 					<div className="fairy-tales-grid">
 						{Fairytales.map((fairytale) => {
