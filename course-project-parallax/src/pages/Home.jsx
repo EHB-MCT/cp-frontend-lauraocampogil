@@ -1,4 +1,3 @@
-import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import FairydustCursor from "../components/FairydustCursor.jsx";
 import Fairytales from "../fairytale-data.json";
