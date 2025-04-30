@@ -14,9 +14,9 @@ function Footer() {
 				<div className="links-container">
 					<h3>Links</h3>
 					<div className="links">
-						<NavLink to="/">Home</NavLink>
-						<NavLink to="/projects">Projects</NavLink>
-						<NavLink to="/makingof">Making Of</NavLink>
+						<NavLink to="/">HOME</NavLink>
+						<NavLink to="/projects">PROJECTS</NavLink>
+						<NavLink to="/makingof">MAKING-OF</NavLink>
 					</div>
 				</div>
 			</div>
