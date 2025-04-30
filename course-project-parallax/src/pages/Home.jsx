@@ -1,4 +1,3 @@
-import Footer from "../components/Footer.jsx";
 import FairydustCursor from "../components/FairydustCursor.jsx";
 import Fairytales from "../fairytale-data.json";
 
@@ -26,7 +25,11 @@ function Home() {
 						})}
 					</div>
 				</div>
-				<Footer />
+				<div className="projects-btn">
+					<a href="/projects">
+						<button className="projects-button">ALL PROJECTS</button>
+					</a>
+				</div>
 			</div>
 		</>
 	);

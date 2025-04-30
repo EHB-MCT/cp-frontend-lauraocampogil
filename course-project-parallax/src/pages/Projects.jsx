@@ -1,4 +1,4 @@
-import Footer from "../components/Footer.jsx";
+
 import Fairytales from "../fairytale-data.json";
 function Projects() {
 	return (
@@ -22,7 +22,6 @@ function Projects() {
 					})}
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 }

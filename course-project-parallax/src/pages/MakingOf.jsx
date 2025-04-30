@@ -1,8 +1,10 @@
 function MakingOf() {
 	return (
-		<div>
-			<h1>Making Of Page</h1>
-		</div>
+		<>
+			<div className="hero-title">
+				<h1>Making-Of</h1>
+			</div>
+		</>
 	);
 }
 
