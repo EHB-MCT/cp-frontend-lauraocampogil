@@ -12,10 +12,6 @@ function Header() {
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/projects">Projects</NavLink>
 					<NavLink to="/makingof">Making-Of</NavLink>
-
-					<Link to="/parallax" target="_blank" rel="noopener noreferrer">
-						Parallax
-					</Link>
 				</div>
 				<Searchbar />
 			</nav>

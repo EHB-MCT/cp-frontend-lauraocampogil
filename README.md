@@ -1,6 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/OwWY7ss_)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18888107)
 
+RESOURCES - PROJECT
+
 1. [YT VIDEO: Multiple pages using router - components explained]-(https://www.youtube.com/watch?v=TWz4TjSssbg)
 2. [YT VIDEO: Custom cursor]-(https://www.youtube.com/watch?v=MMOvm48l_CU)
 3. [YT VIDEO: Custom cursor with framer motion]-(https://www.youtube.com/watch?v=nr3U-RpaQuM)
@@ -11,4 +13,4 @@
 8. [YT VIDEO: Play music button in Sound.jsx]-(https://www.youtube.com/watch?v=U1T_J6Odoqg)
 9. [CLAUDE: Fix the error from the YT VIDEO for the music play]-(https://claude.ai/chat/5657f08b-f8a8-4225-9ef5-deee95fb19a7)
 10. [CLAUDE: Hamburgermenu]-(https://claude.ai/chat/5ebbb0c2-70d0-4b5a-bc75-08f866fbb409)
-11. [YT VIDEO: Scroll parallax animation]-(https://www.youtube.com/watch?v=nZ2LDB7Q7Rk)
+11. [Parallax animation] - (https://www.youtube.com/watch?v=nZ2LDB7Q7Rk)

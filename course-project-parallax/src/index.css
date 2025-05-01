@@ -23,9 +23,9 @@ h1 {
 	text-align: left;
 	color: black;
 	font-size: 24px;
-	margin: 40px 300px 20px;
+	margin: 40px 150px 20px;
 }
-h3 {
+h2 {
 	font-family: "Bungee", cursive;
 	text-align: center;
 	color: black;
@@ -43,8 +43,7 @@ a {
 }
 hr {
 	border: 2px solid black;
-	margin-left: 19rem;
-	width: 60%;
+	width: 80%;
 	margin-top: -40px;
 }
 .fairy-cursor {
@@ -61,7 +60,7 @@ hr {
 	height: 120px;
 	position: absolute;
 	top: 20px;
-	left: 300px;
+	left: 150px;
 }
 .menu {
 	position: absolute;
@@ -286,6 +285,36 @@ footer {
 	font-size: 16px;
 	display: flex;
 }
+/*Making-of-page*/
+.banner {
+	display: flex;
+	justify-content: center;
+}
+.banner img {
+	border-radius: 16px;
+	width: 80%;
+}
+.visitwebsite-btn {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.visitwebsite-button {
+	position: relative;
+	width: 157px;
+	height: 50px;
+	background-color: #e63946;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-family: "Bungee", cursive;
+	font-size: 16px;
+}
+
 /*Firstpage Parallax Website*/
 .parallax {
 	background-image: url("./assets/Images-web/Sterstelsel.png");
@@ -446,4 +475,101 @@ footer {
 	transition: transform 0.2s ease;
 }
 /*Main Parallax Website*/
+.main-container {
+	position: relative;
+	height: 300vh;
+	overflow: hidden;
+}
+.stars-section {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.stars-image {
+	width: 100%;
+	height: 100%;
+}
 
+.stars-image img {
+	width: auto;
+	height: auto;
+}
+
+.brothers-section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+.stars-text p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	font-family: "Comic Neue", cursive;
+	color: white;
+	font-size: 36px;
+}
+.bigstar-section {
+	position: absolute;
+	top: 50vh;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+}
+/*Endpage parallax*/
+.parallax1-button {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.parallax1-btn {
+	position: relative;
+	width: 180px;
+	height: 60px;
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	cursor: pointer;
+	font-family: "Chango", cursive;
+	font-size: 14px;
+	margin-top: 20px;
+}
+.parallax2-button {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.parallax2-btn {
+	position: relative;
+	width: 180px;
+	height: 60px;
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	cursor: pointer;
+	font-family: "Chango", cursive;
+	font-size: 14px;
+	margin-top: 20px;
+}
