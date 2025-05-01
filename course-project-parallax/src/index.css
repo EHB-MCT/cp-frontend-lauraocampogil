@@ -286,7 +286,7 @@ footer {
 	font-size: 16px;
 	display: flex;
 }
-/*Parallax Website*/
+/*Firstpage Parallax Website*/
 .parallax {
 	background-image: url("./assets/Images-web/Sterstelsel.png");
 	width: 100vw;
@@ -445,3 +445,5 @@ footer {
 	transform: scale(1.1);
 	transition: transform 0.2s ease;
 }
+/*Main Parallax Website*/
+
