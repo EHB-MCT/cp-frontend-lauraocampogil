@@ -294,10 +294,40 @@ footer {
 	border-radius: 16px;
 	width: 80%;
 }
-.visitwebsite-btn {
+.explainvideo-container {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 50px;
+	column-gap: 20px;
+}
+.video-section {
+	display: flex;
+	flex-direction: column;
+	margin-left: -140px;
+}
+.video-section h2 {
+	text-align: left;
+}
+.video-yt {
+	width: 550px;
+	height: 350px;
+}
+.yt-lite {
+	border-radius: 16px;
+}
+.description-section {
+	display: flex;
+	flex-direction: column;
+}
+.description-section h2 {
+	text-align: left;
+}
+.description-section p {
+	text-align: left;
+	width: 500px;
+}
+.visitwebsite-btn {
+	display: flex;
+	justify-content: left;
 }
 .visitwebsite-button {
 	position: relative;
