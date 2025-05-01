@@ -8,6 +8,26 @@ function Searchbar() {
 
 	// Close dropdown when clicking outside
 	useEffect(() => {
+		if (searchTerm.trim() === "") {
+			window.searchResults = null;
+			// Trigger a custom event to notify other components
+			window.dispatchEvent(new CustomEvent("searchResultsUpdated", { detail: null }));
+		} else {
+			const results = data.filter((item) => {
+				const searchItem = searchTerm.toLowerCase();
+				const title = item.title.toLowerCase();
+				const name = item.name.toLowerCase();
+				return title.includes(searchItem) || name.includes(searchItem);
+			});
+
+			window.searchResults = results;
+			// Trigger a custom event to notify other components
+			window.dispatchEvent(new CustomEvent("searchResultsUpdated", { detail: results }));
+		}
+	}, [searchTerm]);
+
+	// Update search results whenever search term changes
+	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
 				setShowDropdown(false);
@@ -20,15 +40,14 @@ function Searchbar() {
 		};
 	}, []);
 
-	const onSearch = (searchItem) => {
-		setSearchTerm(searchItem);
-		setShowDropdown(false);
-		console.log("search", searchItem);
-	};
-
 	const handleInputChange = (e) => {
 		setSearchTerm(e.target.value);
 		setShowDropdown(true); // Show dropdown when typing
+	};
+	// Handle clicking on a suggestion
+	const handleSuggestionClick = (item) => {
+		setSearchTerm(item.title);
+		setShowDropdown(false);
 	};
 
 	//6. [YT VIDEO: Searchbar with suggestions]-(https://www.youtube.com/watch?v=Jd7s7egjt30)
@@ -38,7 +57,8 @@ function Searchbar() {
 		.filter((item) => {
 			const searchItem = searchTerm.toLowerCase();
 			const title = item.title.toLowerCase();
-			return searchItem && title.includes(searchItem);
+			const name = item.name.toLowerCase();
+			return searchItem && (title.includes(searchItem) || name.includes(searchItem));
 		})
 		.slice(0, 5); // Limit to 5 results
 
@@ -54,8 +74,8 @@ function Searchbar() {
 			{showDropdown && filteredData.length > 0 && (
 				<div className="dropdown">
 					{filteredData.map((item) => (
-						<div onClick={() => onSearch(item.title)} className="dropdown-row" key={item.id}>
-							{item.title}
+						<div onClick={() => handleSuggestionClick(item)} className="dropdown-row" key={item.id}>
+							{item.title} - {item.name}
 						</div>
 					))}
 				</div>

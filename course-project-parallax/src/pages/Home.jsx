@@ -3,6 +3,18 @@ import Fairytales from "../fairytale-data.json";
 
 function Home() {
 	const [randomFairytales, setRandomFairytales] = useState([]);
+	const [searchResults, setSearchResults] = useState(null);
+	useEffect(() => {
+		const handleSearchResults = (event) => {
+			setSearchResults(event.detail);
+		};
+
+		window.addEventListener("searchResultsUpdated", handleSearchResults);
+
+		return () => {
+			window.removeEventListener("searchResultsUpdated", handleSearchResults);
+		};
+	}, []);
 	useEffect(() => {
 		const getRandomFairytales = () => {
 			const fairytalesCopy = [...Fairytales];
@@ -16,14 +28,18 @@ function Home() {
 			window.location.href = link;
 		}
 	};
+	// Determine which fairytales to display
+	const fairytalesToDisplay = searchResults || randomFairytales;
+	// Determine which title to show
+	const titleText = searchResults ? "SEARCH RESULTS" : "IN THE SPOTLIGHT";
 	return (
 		<>
 			<div className="hero-title">
-				<h1>IN THE SPOTLIGHT</h1>
+				<h1>{titleText}</h1>
 
 				<div className="fairy-tales-wrapper">
 					<div className="fairy-tales-grid">
-						{randomFairytales.map((fairytale) => {
+						{fairytalesToDisplay.map((fairytale) => {
 							return (
 								<div className="fairy-tale" key={fairytale.id}>
 									<img src={fairytale.image} alt="" />

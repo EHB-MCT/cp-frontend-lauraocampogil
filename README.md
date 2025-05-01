@@ -14,3 +14,4 @@ RESOURCES - PROJECT
 9. [CLAUDE: Fix the error from the YT VIDEO for the music play]-(https://claude.ai/chat/5657f08b-f8a8-4225-9ef5-deee95fb19a7)
 10. [CLAUDE: Hamburgermenu]-(https://claude.ai/chat/5ebbb0c2-70d0-4b5a-bc75-08f866fbb409)
 11. [Parallax animation] - (https://www.youtube.com/watch?v=nZ2LDB7Q7Rk)
+12. [Searchbar with searchresults]-(https://claude.ai/chat/76608c43-5542-45ef-9511-f40804fe5187)
