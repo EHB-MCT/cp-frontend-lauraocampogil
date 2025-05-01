@@ -3,132 +3,154 @@
 		"id": 1,
 		"image": "images/the_fairy_boy.jpg",
 		"title": "THE FAIRY BOY OF LEITH",
-		"name": "Jordi De Leeuw"
+		"name": "Jordi De Leeuw",
+		"link": ""
 	},
 	{
 		"id": 2,
 		"image": "images/Red_hood.jpg",
 		"title": "LITTLE RED RIDING HOOD",
-		"name": "Pema Bhutia"
+		"name": "Pema Bhutia",
+		"link": ""
 	},
 	{
 		"id": 3,
 		"image": "images/Red_hood.jpg",
 		"title": "LITTLE RED RIDING HOOD",
-		"name": "Sophia Rahmoun"
+		"name": "Sophia Rahmoun",
+		"link": ""
 	},
 	{
 		"id": 4,
 		"image": "images/blauwbaard.jpg",
 		"title": "BLAUWBAARD",
-		"name": "Wout Van Impe"
+		"name": "Wout Van Impe",
+		"link": ""
 	},
 	{
 		"id": 5,
 		"image": "images/De_Kleine_Zeemeermin.webp",
 		"title": "DE KLEINE ZEEMEERMIN",
-		"name": "Sam Hoeterickx"
+		"name": "Sam Hoeterickx",
+		"link": ""
 	},
 	{
 		"id": 6,
 		"image": "images/Princes_Kaguya.jpg",
 		"title": "PRINCES KAGUYA",
-		"name": "Manal Boulahya"
+		"name": "Manal Boulahya",
+		"link": ""
 	},
 	{
 		"id": 7,
 		"image": "images/Aladdin.jpg",
 		"title": "ALADIN EN DE WONDERLAMP",
-		"name": "Younes Ben Ali"
+		"name": "Younes Ben Ali",
+		"link": ""
 	},
 	{
 		"id": 8,
 		"image": "images/Hans_en_Grietje.jpg",
 		"title": "HANS EN GRIETJE",
-		"name": "Arno Baeck"
+		"name": "Arno Baeck",
+		"link": ""
 	},
 	{
 		"id": 9,
 		"image": "images/Hercules.jpg",
 		"title": "HERCULES",
-		"name": "Rey Mammadbeyli"
+		"name": "Rey Mammadbeyli",
+		"link": ""
 	},
 	{
 		"id": 10,
 		"image": "images/3-biggetjes.jpg",
 		"title": "DE 3 BIGGETJES",
-		"name": "Ramon de Raes"
+		"name": "Ramon de Raes",
+		"link": ""
 	},
 	{
 		"id": 11,
 		"image": "images/Peter_Pan.jpeg",
 		"title": "PETER PAN",
-		"name": "Laura Ocampo"
+		"name": "Laura Ocampo",
+		"link": "/parallax"
 	},
 	{
 		"id": 12,
 		"image": "images/Raaf_en_de_vos.jpg",
 		"title": "DE RAAF EN DE VOS",
-		"name": "Matteo Giambarresi"
+		"name": "Matteo Giambarresi",
+		"link": ""
 	},
 	{
 		"id": 13,
 		"image": "images/Beauty_Beast.jpeg",
 		"title": "BEAUTY AND THE BEAST",
-		"name": "Nordine El Ouafrasi"
+		"name": "Nordine El Ouafrasi",
+		"link": ""
 	},
 	{
 		"id": 14,
 		"image": "images/Raponsje.jpg",
 		"title": "RAPONSJE",
-		"name": "Joel Lopez Mendez"
+		"name": "Joel Lopez Mendez",
+		"link": ""
 	},
 	{
 		"id": 15,
 		"image": "images/waternimf.png",
 		"title": "DE WATERNIMF IN DE VIJVER",
-		"name": "Nina Breedstraet"
+		"name": "Nina Breedstraet",
+		"link": ""
 	},
 	{
 		"id": 16,
 		"image": "images/wonderful-wizard.jpg",
 		"title": "THE WONDERFUL WIZARD",
-		"name": "Luca Lattuca"
+		"name": "Luca Lattuca",
+		"link": ""
 	},
 	{
 		"id": 17,
 		"image": "images/Rapunzel.jpg",
 		"title": "RAPUNZEL",
-		"name": "Fleur Van De Ville"
+		"name": "Fleur Van De Ville",
+		"link": ""
 	},
 	{
 		"id": 18,
 		"image": "images/vuurvogel.jpg",
 		"title": "DE VUURVOGEL",
-		"name": "Beatrice Bjoko"
+		"name": "Beatrice Bjoko",
+		"link": ""
 	},
 	{
 		"id": 19,
 		"image": "images/Duimelijntje.jpg",
 		"title": "DUIMELIJNTJE",
-		"name": "Siriyakorn Klaklang"
+		"name": "Siriyakorn Klaklang",
+		"link": ""
 	},
 	{
 		"id": 20,
 		"image": "images/wolf_zeven_geitjes.jpg",
 		"title": "DE WOLF EN DE 7 GEITJES",
-		"name": "Ernest Marot"
+		"name": "Ernest Marot",
+		"link": ""
 	},
 	{
 		"id": 21,
 		"image": "images/Duimelijntje.jpg",
 		"title": "DUIMELIJNTJE",
-		"name": "Maxim Westerbeek"
+		"name": "Maxim Westerbeek",
+		"link": ""
 	},
 	{
 		"id": 22,
 		"image": "images/witte_slang.jpeg",
 		"title": "DE KONING EN DE WITTE SLANG",
-		"name": "Seppe Ghekiere"
+		"name": "Seppe Ghekiere",
+		"link": ""
 	}
 ]

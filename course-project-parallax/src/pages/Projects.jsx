@@ -1,6 +1,10 @@
-
 import Fairytales from "../fairytale-data.json";
 function Projects() {
+	const handleButtonClick = (link) => {
+		if (link) {
+			window.location.href = link;
+		}
+	};
 	return (
 		<>
 			<div className="hero-title">
@@ -15,7 +19,9 @@ function Projects() {
 								<div className="fairy-tale-text">
 									<h2>{fairytale.title}</h2>
 									<p>{fairytale.name}</p>
-									<button className="fairy-tale-button">i</button>
+									<button className="fairy-tale-button" onClick={() => handleButtonClick(fairytale.link)}>
+										i
+									</button>
 								</div>
 							</div>
 						);
