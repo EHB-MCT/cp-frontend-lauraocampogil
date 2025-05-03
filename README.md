@@ -15,3 +15,4 @@ RESOURCES - PROJECT
 10. [CLAUDE: Hamburgermenu]-(https://claude.ai/chat/5ebbb0c2-70d0-4b5a-bc75-08f866fbb409)
 11. [Parallax animation] - (https://www.youtube.com/watch?v=nZ2LDB7Q7Rk)
 12. [Searchbar with searchresults]-(https://claude.ai/chat/76608c43-5542-45ef-9511-f40804fe5187)
+13. [YT VIDEO: Implement yt video in react]-(https://www.youtube.com/watch?v=ulzt8xX-cpI)
