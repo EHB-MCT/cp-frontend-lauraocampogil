@@ -505,10 +505,13 @@ footer {
 	transition: transform 0.2s ease;
 }
 /*Main Parallax Website*/
-.main-container {
+.parallax-container {
 	position: relative;
-	height: 300vh;
+	height: 100vh;
 	overflow: hidden;
+	width: 100vw;
+	display: grid;
+	align-items: center;
 }
 .stars-section {
 	position: sticky;
@@ -540,7 +543,7 @@ footer {
 }
 .stars-text p {
 	position: absolute;
-	top: 50%;
+	top: 10%;
 	left: 50%;
 	text-align: center;
 	font-family: "Comic Neue", cursive;

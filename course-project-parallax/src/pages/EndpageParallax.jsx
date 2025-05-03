@@ -17,7 +17,7 @@ function EndpageParallax() {
 						</a>
 					</div>
 					<div className="parallax2-button">
-						<a href="/parallax">
+						<a href="/projects">
 							<button className="parallax-btn">New Stories</button>
 						</a>
 					</div>
