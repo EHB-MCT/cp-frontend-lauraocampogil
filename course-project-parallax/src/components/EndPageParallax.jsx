@@ -11,15 +11,17 @@ function EndpageParallax() {
 					<div className="main-title">
 						<h1>The End</h1>
 					</div>
-					<div className="parallax1-button">
-						<a href="/parallax">
-							<button className="parallax-btn">Restart Story</button>
-						</a>
-					</div>
-					<div className="parallax2-button">
-						<a href="/projects">
-							<button className="parallax-btn">New Stories</button>
-						</a>
+					<div className="end-button">
+						<div className="parallax1-button">
+							<a href="/parallax">
+								<button className="parallax-btn">Restart Story</button>
+							</a>
+						</div>
+						<div className="parallax2-button">
+							<a href="/projects">
+								<button className="parallax-btn">New Stories</button>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -504,105 +504,182 @@ footer {
 	transform: scale(1.1);
 	transition: transform 0.2s ease;
 }
-/*Main Parallax Website*/
-.parallax-container {
-	position: relative;
-	height: 100vh;
-	overflow: hidden;
-	width: 100vw;
-	display: grid;
-	align-items: center;
-}
-.stars-section {
-	position: sticky;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-.stars-image {
-	width: 100%;
-	height: 100%;
-}
-
-.stars-image img {
-	width: auto;
-	height: auto;
-}
-
-.brothers-section {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: 2;
-}
-.stars-text p {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	text-align: center;
-	font-family: "Comic Neue", cursive;
-	color: white;
-	font-size: 36px;
-}
-.bigstar-section {
-	position: absolute;
-	top: 50vh;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 3;
-}
 /*Endpage parallax*/
 .parallax1-button {
 	position: absolute;
 	bottom: 15%;
-	left: 50%;
+	left: 30%;
 	transform: translateX(-50%);
-}
-.parallax1-btn {
-	position: relative;
-	width: 180px;
-	height: 60px;
-	background-color: transparent;
-	border: 2px solid white;
-	border-radius: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	cursor: pointer;
-	font-family: "Chango", cursive;
-	font-size: 14px;
-	margin-top: 20px;
 }
 .parallax2-button {
 	position: absolute;
 	bottom: 15%;
-	left: 50%;
+	left: 70%;
 	transform: translateX(-50%);
 }
-.parallax2-btn {
+
+.end-button {
+	display: flex;
+}
+
+/*Main Parallax Website*/
+
+.parallax-container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
 	position: relative;
-	width: 180px;
-	height: 60px;
-	background-color: transparent;
-	border: 2px solid white;
-	border-radius: 100px;
+	background-color: #0a1629;
+}
+
+.peterpan-parallax {
+	width: 100%;
+	height: 100%;
+}
+
+.animation-layer {
+	width: 100%;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+}
+.animation-layer img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.animation-image-shadow-scene1 {
+	width: 300px;
+	rotate: 30deg;
+}
+
+.text-animation p {
+	font-family: "Comic Neue", cursive;
 	color: white;
+	font-size: 28px;
+}
+
+.animation-image-island {
+	width: 500px;
+	margin-left: 500px;
+	margin-top: 150px;
+}
+
+.animation-image-shadow-scene2 {
+	width: 300px;
+	rotate: 70deg;
+	margin-left: -100px;
+}
+
+.animation-image-lostguys {
+	width: 60%;
+	margin-left: 250px;
+	margin-top: 100px;
+}
+
+.animation-image-pirates {
+	width: 55%;
+	margin-left: 300px;
+	margin-top: 200px;
+}
+
+.animation-image-swordpeter {
+	width: 15%;
+	margin-left: 500px;
+	margin-top: 330px;
+}
+
+.animation-image-swordhaak {
+	width: 15%;
+	rotate: 330deg;
+	margin-left: 630px;
+	margin-top: 330px;
+}
+
+/* Horizontal Scroll Section Styles */
+.horizontal-section-container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.horizontal-scroll-area {
+	width: 100%;
+	height: 100vh;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.horizontal-scroll-area::-webkit-scrollbar {
+	display: none;
+}
+
+.horizontal-content {
+	position: relative;
+	height: 100vh;
+	width: 300%; /* Three panels */
+}
+
+.horizontal-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+
+.sticky-layer {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	pointer-events: none; /* Allows clicks to pass through to elements behind */
+	transition: opacity 0.5s ease; /* Smooth transition when appearing/disappearing */
+}
+
+.sticky-layer.visible {
+	opacity: 1;
+}
+
+.sticky-layer.hidden {
+	opacity: 0;
+}
+
+.horizontal-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.horizontal-controls {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	display: flex;
+	gap: 20px;
+}
+
+.horizontal-controls button {
+	background-color: rgba(255, 255, 255, 0.3);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 20px;
 	cursor: pointer;
-	font-family: "Chango", cursive;
-	font-size: 14px;
-	margin-top: 20px;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+.horizontal-controls button:hover {
+	background-color: rgba(255, 255, 255, 0.5);
 }
