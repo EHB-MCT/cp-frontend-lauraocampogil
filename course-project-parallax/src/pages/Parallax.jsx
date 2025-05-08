@@ -7,7 +7,7 @@ import EndPageParallax from "../components/EndPageParallax.jsx";
 //images import
 import SterStelsel from "../assets/Images-web/Sterstelsel.png";
 import Brothers from "../assets/Images-web/londen-littleguys.png";
-import BigStar from "../assets/Images-web/Starwithstars.png";
+import OneStar from "../assets/Images-web/ONE-STAR-NOBK.png";
 import Shadow from "../assets/Images-web/PeterPan-Shadow-RIGHT.png";
 import Rainbow from "../assets/Images-web/Water-rainbow-extended.png";
 import Island from "../assets/Images-web/Island-NOBK.png";
@@ -22,86 +22,21 @@ import Sword from "../assets/Images-web/Sword.png";
 import Children from "../assets/Images-web/PeterPan-helps.png";
 import FlyingShip from "../assets/Images-web/UitNeverlandShip.png";
 
-// Custom hook for horizontal parallax - defined OUTSIDE the component
-const useParallax = ({ speed = 0, targetElement = null }) => {
-	const ref = useRef(null);
-	const [position, setPosition] = useState(0);
-
-	useEffect(() => {
-		if (!targetElement) return;
-
-		const handleScroll = () => {
-			const scrollPosition = targetElement.scrollLeft;
-			setPosition(scrollPosition * speed * 0.01);
-		};
-
-		const element = targetElement;
-		element.addEventListener("scroll", handleScroll);
-		return () => element.removeEventListener("scroll", handleScroll);
-	}, [speed, targetElement]);
-
-	return { ref, position };
-};
-
 function PeterPanParallax() {
 	const parallaxRef = useRef(null);
-	const horizontalScrollRef = useRef(null);
-	const [showLostGuys, setShowLostGuys] = useState(true);
-
-	// Initialize parallax effects after the component mounts
-	const [scrollContainer, setScrollContainer] = useState(null);
+	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
 	useEffect(() => {
-		if (horizontalScrollRef.current) {
-			setScrollContainer(horizontalScrollRef.current);
-		}
-	}, []);
-
-	// Setup parallax layers with proper container reference
-	const forestBgParallax = useParallax({
-		speed: 30,
-		targetElement: scrollContainer,
-	});
-
-	const forestMidParallax = useParallax({
-		speed: 70,
-		targetElement: scrollContainer,
-	});
-
-	const treeParallax = useParallax({
-		speed: 40,
-		targetElement: scrollContainer,
-	});
-
-	// Handle LostGuys visibility based on scroll position
-	useEffect(() => {
-		if (!scrollContainer) return;
-
-		const handleVisibility = () => {
-			const scrollPosition = scrollContainer.scrollLeft;
-			const scrollWidth = scrollContainer.scrollWidth;
-			const viewportWidth = scrollContainer.clientWidth;
-
-			// Hide LostGuys when we reach the last third (Tree section)
-			if (scrollPosition + viewportWidth > (scrollWidth * 2) / 3) {
-				setShowLostGuys(false);
-			} else {
-				setShowLostGuys(true);
-			}
+		const handleMouseMove = (e) => {
+			setMousePosition({
+				x: (e.clientX / window.innerWidth) * 20 - 10,
+				y: (e.clientY / window.innerHeight) * 20 - 10,
+			});
 		};
 
-		scrollContainer.addEventListener("scroll", handleVisibility);
-		return () => scrollContainer.removeEventListener("scroll", handleVisibility);
-	}, [scrollContainer]);
-
-	const scrollHorizontal = (direction) => {
-		if (horizontalScrollRef.current) {
-			horizontalScrollRef.current.scrollBy({
-				left: direction * 300,
-				behavior: "smooth",
-			});
-		}
-	};
+		window.addEventListener("mousemove", handleMouseMove);
+		return () => window.removeEventListener("mousemove", handleMouseMove);
+	}, []);
 
 	return (
 		<>
@@ -109,7 +44,7 @@ function PeterPanParallax() {
 				<FairydustCursor />
 				<HeaderParallax />
 				<div className="parallax-container">
-					<Parallax pages={11} style={{ top: "0", left: "0" }} className="peterpan-parallax" ref={parallaxRef}>
+					<Parallax pages={7} style={{ top: "0", left: "0" }} className="peterpan-parallax" ref={parallaxRef}>
 						{/* Sections 0-3 (Vertical Scroll) */}
 						<ParallaxLayer sticky={{ start: 0, end: 2 }} offset={0} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={SterStelsel} />
@@ -123,120 +58,81 @@ function PeterPanParallax() {
 						<ParallaxLayer offset={1.1} speed={2} style={{ zIndex: 1 }} className="text-animation">
 							<p> "Wendy and her brothers believe in the fairy tale of Peter Pan"</p>
 						</ParallaxLayer>
-						<ParallaxLayer offset={2} speed={2} style={{ zIndex: 1 }} className="text-animation">
+						<ParallaxLayer offset={1.8} speed={2} style={{ zIndex: 1 }} className="text-animation">
 							<p> "Peter Pan who was looking for his shadow entered Wendy's house, where his shadow was"</p>
 						</ParallaxLayer>
-						<ParallaxLayer offset={2.1} speed={1} style={{ zIndex: -1 }}>
-							<img className="animation-layer" src={BigStar} />
+						<ParallaxLayer offset={1.9} speed={2} style={{ zIndex: 1 }} className="text-animation">
+							<p> “Peter Pan together with Wendy and her brothers fly to the magical island of Neverland, where Peter Pan lives”</p>
 						</ParallaxLayer>
-						<ParallaxLayer offset={3} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer sticky={{ start: 1.5, end: 2 }} offset={1.9} speed={1} style={{ zIndex: -1 }}>
+							<img className="animation-layer" src={OneStar} />
+						</ParallaxLayer>
+						<ParallaxLayer offset={2.99} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={Rainbow} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={3.2} speed={2} style={{ zIndex: 1 }} className="text-animation">
+						<ParallaxLayer offset={3} speed={2} style={{ zIndex: 1 }} className="text-animation">
 							<p> “Welcome to Neverland! Where children never have to grow up”</p>
 						</ParallaxLayer>
-						<ParallaxLayer offset={3} speed={1} style={{ zIndex: 1 }}>
+						<ParallaxLayer offset={2.99} speed={1} style={{ zIndex: 1 }}>
 							<img className="animation-image-island" src={Island} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={3} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={2.99} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-image-shadow-scene2" src={Shadow} />
 						</ParallaxLayer>
-
-						{/* Horizontal Scroll Section (offset 4-6) */}
-						<ParallaxLayer offset={4} speed={0.5} style={{ height: "300vh" }}>
-							<div className="horizontal-section-container">
-								<div className="horizontal-controls">
-									<button onClick={() => scrollHorizontal(-1)}>← Previous</button>
-									<button onClick={() => scrollHorizontal(1)}>Next →</button>
-								</div>
-
-								<div className="horizontal-scroll-area" ref={horizontalScrollRef}>
-									<div className="horizontal-content">
-										{/* Forest Background */}
-										<div
-											ref={forestBgParallax.ref}
-											className="horizontal-layer"
-											style={{
-												transform: `translateX(${forestBgParallax.position}px)`,
-												zIndex: -1,
-											}}
-										>
-											<img className="horizontal-image" src={MagicForest} alt="Magic Forest" />
-										</div>
-
-										{/* Sticky Lost Guys (visible only during first two sections) */}
-										<div className={`horizontal-layer sticky-layer ${showLostGuys ? "visible" : "hidden"}`} style={{ zIndex: 1 }}>
-											<img className="animation-image-lostguys" src={LostGuys} alt="Lost Guys" />
-										</div>
-
-										{/* Forest Midground */}
-										<div
-											ref={forestMidParallax.ref}
-											className="horizontal-layer"
-											style={{
-												transform: `translateX(${forestMidParallax.position}px)`,
-												zIndex: -1,
-												left: "100%",
-											}}
-										>
-											<img className="horizontal-image" src={Forest} alt="Forest" />
-										</div>
-
-										{/* Tree */}
-										<div
-											ref={treeParallax.ref}
-											className="horizontal-layer"
-											style={{
-												transform: `translateX(${treeParallax.position}px)`,
-												zIndex: -1,
-												left: "200%",
-											}}
-										>
-											<img className="horizontal-image" src={Tree} alt="Tree" />
-										</div>
-										<ParallaxLayer offset={4.2} speed={2} style={{ zIndex: 1 }} className="text-animation">
-											<p>“The Lost Boys were kidnapped by the pirates”</p>
-										</ParallaxLayer>
-									</div>
-								</div>
-							</div>
+						{/*BEGIN HORIZONTAL PARALLAX*/}
+						<ParallaxLayer offset={3} speed={0.5} style={{ height: "300vh" }}>
+							<img className="horizontal-image" src={MagicForest} alt="Magic Forest" />
 						</ParallaxLayer>
-
+						{/*STICKY IMAGE UNTIL TREE IMAGES*/}
+						<ParallaxLayer offset={3} speed={0.5} style={{ height: "300vh" }}>
+							<img className="animation-image-lostguys" src={LostGuys} alt="Lost Guys" />
+						</ParallaxLayer>
+						<ParallaxLayer offset={3} speed={0.5} style={{ height: "300vh" }}>
+							<img className="horizontal-image" src={Forest} alt="Forest" />
+						</ParallaxLayer>
+						{/*Disappear of LostGuys*/}
+						<ParallaxLayer offset={3} speed={0.5} style={{ height: "300vh" }}>
+							<img className="horizontal-image" src={Tree} alt="Tree" />
+						</ParallaxLayer>
+						{/* END HORIZONTAL PARALLAX */}
+						<ParallaxLayer offset={4.2} speed={2} style={{ zIndex: 1 }} className="text-animation">
+							<p>“The Lost Boys were kidnapped by the pirates”</p>
+						</ParallaxLayer>
 						{/* Sections 7-11 (Vertical Scroll Again) */}
-						<ParallaxLayer offset={5} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={3.99} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={Ship} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={5} speed={1} style={{ zIndex: 1 }}>
+						<ParallaxLayer offset={3.99} speed={1} style={{ zIndex: 1 }}>
 							<img className="animation-image-pirates" src={Pirates} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={7} speed={2} style={{ zIndex: 1 }} className="text-animation">
+						<ParallaxLayer offset={4} speed={2} style={{ zIndex: 1 }} className="text-animation">
 							<p>“Captain Hook and Peter Pan fight for the lost boys”</p>
 						</ParallaxLayer>
-						<ParallaxLayer sticky={{ start: 5, end: 7 }} offset={8} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer sticky={{ start: 4, end: 4.5 }} offset={4} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={PeterVSHaak} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={7} speed={1} style={{ zIndex: 1 }}>
+						<ParallaxLayer offset={4} speed={1} style={{ zIndex: 1 }}>
 							<img className="animation-image-swordpeter" src={Sword} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={7} speed={1} style={{ zIndex: 1 }}>
+						<ParallaxLayer offset={4} speed={1} style={{ zIndex: 1 }}>
 							<img className="animation-image-swordhaak" src={Sword} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={8} speed={2} style={{ zIndex: 1 }} className="text-animation">
+						<ParallaxLayer offset={4.99} speed={2} style={{ zIndex: 1 }} className="text-animation">
 							<p>“Peter Pan saves the lost boys and Wendy”</p>
 						</ParallaxLayer>
-						<ParallaxLayer offset={8} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={4.99} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={Children} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={9} speed={2} style={{ zIndex: 1 }} className="text-animation">
+						<ParallaxLayer offset={5} speed={2} style={{ zIndex: 1 }} className="text-animation">
 							<p>“Together they fly back to London”</p>
 						</ParallaxLayer>
-						<ParallaxLayer offset={9} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={5} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={FlyingShip} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={10} speed={1} style={{ zIndex: -1 }}>
-							<img className="animation-layer" src={BigStar} />
+						<ParallaxLayer offset={5.99} speed={1} style={{ zIndex: -1 }}>
+							<img className="animation-layer" src={OneStar} />
 						</ParallaxLayer>
-						<ParallaxLayer offset={11} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={6} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={SterStelsel} />
 						</ParallaxLayer>
 					</Parallax>

@@ -522,8 +522,7 @@ footer {
 	display: flex;
 }
 
-/*Main Parallax Website*/
-
+/* Main Parallax Website */
 .parallax-container {
 	width: 100%;
 	height: 100vh;
@@ -598,88 +597,21 @@ footer {
 	margin-left: 630px;
 	margin-top: 330px;
 }
-
-/* Horizontal Scroll Section Styles */
-.horizontal-section-container {
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-}
-
-.horizontal-scroll-area {
-	width: 100%;
-	height: 100vh;
-	overflow-x: auto;
-	overflow-y: hidden;
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none; /* IE and Edge */
-	scroll-behavior: smooth;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.horizontal-scroll-area::-webkit-scrollbar {
-	display: none;
-}
-
-.horizontal-content {
-	position: relative;
-	height: 100vh;
-	width: 300%; /* Three panels */
-}
-
-.horizontal-layer {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-}
-
-.sticky-layer {
+.star-zoom-container {
 	position: fixed;
-	width: 100%;
-	height: 100vh;
 	top: 0;
 	left: 0;
-	pointer-events: none; /* Allows clicks to pass through to elements behind */
-	transition: opacity 0.5s ease; /* Smooth transition when appearing/disappearing */
-}
-
-.sticky-layer.visible {
-	opacity: 1;
-}
-
-.sticky-layer.hidden {
-	opacity: 0;
-}
-
-.horizontal-image {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.horizontal-controls {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
+	height: 100vh;
+	pointer-events: none;
 	z-index: 10;
 	display: flex;
-	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.5s ease-out;
 }
 
-.horizontal-controls button {
-	background-color: rgba(255, 255, 255, 0.3);
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 20px;
-	cursor: pointer;
-	font-size: 16px;
-	transition: background-color 0.3s;
-}
-
-.horizontal-controls button:hover {
-	background-color: rgba(255, 255, 255, 0.5);
+/* Star glow effect */
+.star-glow {
+	filter: drop-shadow(0 0 10px rgba(255, 255, 200, 0.7)) drop-shadow(0 0 20px rgba(255, 255, 150, 0.5));
 }
