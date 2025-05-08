@@ -28,7 +28,7 @@ function MakingOf() {
 						</p>
 
 						<div className="visitwebsite-btn">
-							<a href="/parallax">
+							<a href="/firstpageparallax">
 								<button className="visitwebsite-button">Visit Website</button>
 							</a>
 						</div>

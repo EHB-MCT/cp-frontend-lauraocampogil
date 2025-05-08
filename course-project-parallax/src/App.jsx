@@ -17,9 +17,10 @@ function App() {
 						<Route path="projects" element={<Projects />} />
 						<Route path="makingof" element={<MakingOf />} />
 					</Route>
-					<Route path="/parallax">
-						<Route index element={<Parallax />} />
+					<Route path="/firstpageparallax">
+						<Route index element={<FirstpageParallax />} />
 					</Route>
+					<Route path="/parallax" element={<Parallax />} />
 				</Routes>
 			</BrowserRouter>
 		</>
