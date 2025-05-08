@@ -24,19 +24,6 @@ import FlyingShip from "../assets/Images-web/UitNeverlandShip.png";
 
 function PeterPanParallax() {
 	const parallaxRef = useRef(null);
-	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-	useEffect(() => {
-		const handleMouseMove = (e) => {
-			setMousePosition({
-				x: (e.clientX / window.innerWidth) * 20 - 10,
-				y: (e.clientY / window.innerHeight) * 20 - 10,
-			});
-		};
-
-		window.addEventListener("mousemove", handleMouseMove);
-		return () => window.removeEventListener("mousemove", handleMouseMove);
-	}, []);
 
 	return (
 		<>
