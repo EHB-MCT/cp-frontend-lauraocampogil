@@ -56,7 +56,7 @@ function Home() {
 					</div>
 				</div>
 				<div className="projects-btn">
-					<a href="/projects">
+					<a href="#/projects">
 						<button className="projects-button">ALL PROJECTS</button>
 					</a>
 				</div>

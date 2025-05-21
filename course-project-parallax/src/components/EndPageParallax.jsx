@@ -13,12 +13,12 @@ function EndpageParallax() {
 					</div>
 					<div className="end-button">
 						<div className="parallax1-button">
-							<a href="/firstpageparallax">
+							<a href="#/firstpageparallax">
 								<button className="parallax-btn">Restart Story</button>
 							</a>
 						</div>
 						<div className="parallax2-button">
-							<a href="/projects">
+							<a href="#/projects">
 								<button className="parallax-btn">New Stories</button>
 							</a>
 						</div>
