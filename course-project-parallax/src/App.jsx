@@ -10,7 +10,7 @@ import FirstpageParallax from "./pages/FirstpageParallax.jsx";
 function App() {
 	return (
 		<>
-			<HashRouter>
+			<HashRouter basename="/cp-frontend-lauraocampogil/">
 				<Routes>
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />

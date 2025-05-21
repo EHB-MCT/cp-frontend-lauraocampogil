@@ -12,7 +12,7 @@ function FirstpageParallax() {
 						<h1>Discover the magic world of Peter Pan</h1>
 					</div>
 					<div className="parallax-button">
-						<a href="/parallax">
+						<a href="#/parallax">
 							<button className="parallax-btn">Discover now</button>
 						</a>
 					</div>
