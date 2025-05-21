@@ -13,6 +13,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	overflow-x: hidden;
 }
 .App {
 	height: 100vh;
@@ -523,6 +524,7 @@ footer {
 }
 
 /* Main Parallax Website */
+
 .parallax-container {
 	width: 100%;
 	height: 100vh;
@@ -544,27 +546,64 @@ footer {
 	align-items: center;
 	position: relative;
 }
+
 .animation-layer img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
+.shadow-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
 .animation-image-shadow-scene1 {
 	width: 300px;
-	rotate: 30deg;
+	/* Transform will be applied via react state */
+	will-change: transform;
+}
+
+.text-animation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .text-animation p {
 	font-family: "Comic Neue", cursive;
 	color: white;
 	font-size: 28px;
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.centered-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.star-image {
+	max-width: 80%;
+	max-height: 80%;
+	will-change: transform;
 }
 
 .animation-image-island {
 	width: 500px;
 	margin-left: 500px;
 	margin-top: 150px;
+	will-change: transform;
 }
 
 .animation-image-shadow-scene2 {
@@ -573,10 +612,61 @@ footer {
 	margin-left: -100px;
 }
 
-.animation-image-lostguys {
+/* Horizontal scroll section styles */
+.horizontal-section {
+	width: 100%;
+	height: 100vh;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	position: relative;
+	white-space: nowrap;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+}
+
+.horizontal-section::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera */
+}
+
+.horizontal-content {
+	display: inline-flex;
+	height: 100%;
+	width: 300%;
+}
+
+.horizontal-item {
+	flex: 0 0 33.333%;
+	width: 33.333%;
+	height: 100%;
+	scroll-snap-align: start;
+	position: relative;
+}
+
+.background-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.lost-guys-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	transition: opacity 0.5s ease;
+	z-index: 10;
+}
+
+.lost-guys-image {
 	width: 60%;
-	margin-left: 250px;
-	margin-top: 100px;
+	max-height: 60vh;
+	object-fit: contain;
 }
 
 .animation-image-pirates {
@@ -596,4 +686,234 @@ footer {
 	rotate: 330deg;
 	margin-left: 630px;
 	margin-top: 330px;
+}
+
+/* Make sure the horizontal section scrolls */
+.horizontal-section::after {
+	content: "";
+	display: block;
+	min-width: 1px;
+	height: 1px;
+}
+
+/* Auto scroll indicator */
+.scroll-indicator {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	opacity: 0.8;
+	z-index: 10;
+	animation: pulse 2s infinite;
+}
+/* Add this to your PeterPanParallax.css file */
+
+/* Add this to your PeterPanParallax.css file */
+
+/* Simple Horizontal Scene Styles */
+.simple-horizontal-scene {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.forest-scene {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.forest-scene img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.lost-boys-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	pointer-events: none;
+	transition: opacity 1s ease-in-out;
+}
+
+.lost-boys-wrapper img {
+	width: 60%;
+	max-width: 500px;
+	max-height: 60vh;
+	object-fit: contain;
+}
+
+.scene-indicators {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	z-index: 20;
+}
+
+.scene-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.scene-dot.active {
+	background-color: white;
+	transform: scale(1.2);
+}
+/* PeterPanHorizontalParallax.css */
+
+.horizontal-parallax-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 50;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.5s ease;
+}
+
+.horizontal-parallax-container.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.horizontal-scroll-section {
+	width: 100%;
+	height: 100vh;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	position: relative;
+	/* Hide scrollbar */
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	/* Smooth scrolling */
+	scroll-behavior: smooth;
+}
+
+.horizontal-scroll-section::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera */
+}
+
+.horizontal-content {
+	display: inline-flex;
+	width: 300%; /* 3 scenes, each 100% viewport width */
+	height: 100%;
+}
+
+.horizontal-scene {
+	flex: 0 0 33.333%;
+	width: 33.333%;
+	height: 100%;
+	position: relative;
+}
+
+.background-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.lost-guys-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	pointer-events: none;
+	transition: opacity 0.8s ease;
+	opacity: 0;
+}
+
+.lost-guys-overlay.visible {
+	opacity: 1;
+}
+
+.lost-guys-overlay.hidden {
+	opacity: 0;
+}
+
+.lost-guys-overlay img {
+	width: 60%;
+	max-height: 60%;
+	object-fit: contain;
+}
+
+.scroll-instruction {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-size: 18px;
+	animation: pulse 2s infinite;
+	z-index: 20;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+	.lost-guys-overlay img {
+		width: 80%;
+	}
+
+	.scroll-instruction {
+		font-size: 14px;
+		padding: 8px 16px;
+	}
+}
+/* Add to your main PeterPanParallax.css file */
+
+/* Horizontal section placeholder */
+.horizontal-placeholder {
+	height: 100vh;
+	width: 100%;
+	background-color: transparent;
+}
+
+/* Adjust vertical scrolling when horizontal section is active */
+body.horizontal-active {
+	overflow: hidden;
 }
