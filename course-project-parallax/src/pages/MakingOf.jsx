@@ -22,8 +22,8 @@ function MakingOf() {
 					<div className="description-section">
 						<h2>Description</h2>
 						<p>
-							Embark on a magical journey through Peter Pan's enchanting world in this immersive parallax experience.From the Darling children's bedroom to the mysterious Neverland island, where adventure awaits at every scroll. Encounter the
-							spirited Lost Boys, face Captain Hook's menacing pirates aboard the Jolly Roger, and follow Tinkerbell's cursor and magic fee through lush forests and crystal lagoons. Don't forget to activate your sound for the full enchantment—the
+							Embark on a magical journey through Peter Pan's enchanting world in this immersive parallax experience. From the Darling children's bedroom to the mysterious Neverland island, where adventure awaits at every scroll. Encounter the
+							spirited Lost Boys, face Captain Hook's menacing pirates aboard the Jolly Roger, and follow Tinkerbell's cursor and magic fee through the forests and crystal lagoons. Don't forget to activate your sound for the full enchantment—the
 							lost boys and Peter Pan await!
 						</p>
 
