@@ -37,11 +37,11 @@ function Projects() {
 					{fairytalesToDisplay.map((fairytale) => {
 						return (
 							<div className="fairy-tale" key={fairytale.id}>
-								<img src={fairytale.image} alt="" />
+								<img src={fairytale.imgThumbnail} alt="" />
 								<div className="fairy-tale-text">
-									<h2>{fairytale.title}</h2>
-									<p>{fairytale.name}</p>
-									<button className="fairy-tale-button" onClick={() => handleButtonClick(fairytale.link)}>
+									<h2>{fairytale.fairytale}</h2>
+									<p>{fairytale.nameStudent}</p>
+									<button className="fairy-tale-button" onClick={() => handleButtonClick(fairytale.fairytaleLink)}>
 										i
 									</button>
 								</div>

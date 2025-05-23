@@ -1,6 +1,6 @@
 import Logo from "../assets/Images-web/Logo_ErWasEens.svg";
-import Searchbar from "./Searchbar";
-import { NavLink} from "react-router-dom";
+import Searchbar from "./Searchbar.jsx";
+import { NavLink } from "react-router-dom";
 function Header() {
 	return (
 		<header>

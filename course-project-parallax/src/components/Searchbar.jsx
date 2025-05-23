@@ -15,8 +15,8 @@ function Searchbar() {
 		} else {
 			const results = data.filter((item) => {
 				const searchItem = searchTerm.toLowerCase();
-				const title = item.title.toLowerCase();
-				const name = item.name.toLowerCase();
+				const title = item.fairytale.toLowerCase();
+				const name = item.nameStudent.toLowerCase();
 				return title.includes(searchItem) || name.includes(searchItem);
 			});
 
@@ -46,7 +46,7 @@ function Searchbar() {
 	};
 	// Handle clicking on a suggestion
 	const handleSuggestionClick = (item) => {
-		setSearchTerm(item.title);
+		setSearchTerm(item.fairytale);
 		setShowDropdown(false);
 	};
 
@@ -56,8 +56,8 @@ function Searchbar() {
 	const filteredData = data
 		.filter((item) => {
 			const searchItem = searchTerm.toLowerCase();
-			const title = item.title.toLowerCase();
-			const name = item.name.toLowerCase();
+			const title = item.fairytale.toLowerCase();
+			const name = item.nameStudent.toLowerCase();
 			return searchItem && (title.includes(searchItem) || name.includes(searchItem));
 		})
 		.slice(0, 5); // Limit to 5 results
@@ -75,7 +75,7 @@ function Searchbar() {
 				<div className="dropdown">
 					{filteredData.map((item) => (
 						<div onClick={() => handleSuggestionClick(item)} className="dropdown-row" key={item.id}>
-							{item.title} - {item.name}
+							{item.fairytale} - {item.nameStudent}
 						</div>
 					))}
 				</div>
