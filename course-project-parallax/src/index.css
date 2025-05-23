@@ -230,8 +230,7 @@ footer {
 .footer-container {
 	display: flex;
 	align-items: flex-start;
-	width: 50%;
-	margin: 10px;
+	margin: 25px;
 	gap: 5rem;
 }
 .logo-footer {
@@ -250,7 +249,6 @@ footer {
 	align-items: flex-start;
 	flex-direction: column;
 	margin: 0 20px;
-	max-width: 400px;
 }
 .about-container h3 {
 	font-family: "Bungee", cursive;
@@ -266,6 +264,7 @@ footer {
 	color: black;
 	font-size: 16px;
 	margin: 10px 0;
+	width: 600px;
 }
 .links-container {
 	display: flex;
