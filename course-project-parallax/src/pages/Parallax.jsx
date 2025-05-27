@@ -80,7 +80,7 @@ function PeterPanParallax() {
 	// Calculate star scale (Section 2)
 	const getStarScale = () => {
 		const sectionStart = window.innerHeight * 1.5;
-		const sectionEnd = window.innerHeight * 2.1; // Shorter section for faster growth
+		const sectionEnd = window.innerHeight * 2.3; // Shorter section for faster growth
 		if (scrollY < sectionStart) return 1;
 		if (scrollY > sectionEnd) return 5;
 		const sectionProgress = (scrollY - sectionStart) / (sectionEnd - sectionStart);
@@ -136,7 +136,7 @@ function PeterPanParallax() {
 				<FairydustCursor />
 				<HeaderParallax />
 				<div className="parallax-container">
-					<Parallax pages={9} style={{ top: "0", left: "0" }} className="peterpan-parallax" ref={parallaxRef}>
+					<Parallax pages={8.5} style={{ top: "0", left: "0" }} className="peterpan-parallax" ref={parallaxRef}>
 						{/* Section 0-1: Brothers with moving Peter Pan */}
 						<ParallaxLayer sticky={{ start: 0, end: 1 }} offset={0} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={SterStelsel} alt="Star System" />
@@ -215,7 +215,7 @@ function PeterPanParallax() {
 									src={MagicForest}
 									alt="Magic Forest"
 									style={{
-										transform: `translateX(-${getHorizontalProgress() * 100}%)`,
+										transform: `translateX(-${getHorizontalProgress() * 200}%)`,
 										transition: "transform 0.1s ease-out",
 									}}
 								/>
@@ -224,7 +224,16 @@ function PeterPanParallax() {
 									src={Forest}
 									alt="Forest"
 									style={{
-										transform: `translateX(-${getHorizontalProgress() * 100}%)`,
+										transform: `translateX(-${getHorizontalProgress() * 200}%)`,
+										transition: "transform 0.1s ease-out",
+									}}
+								/>
+								<img
+									className="horizontal-image tree-kidnapped"
+									src={Tree}
+									alt="Tree"
+									style={{
+										transform: `translateX(-${getHorizontalProgress() * 200}%)`,
 										transition: "transform 0.1s ease-out",
 									}}
 								/>
@@ -244,19 +253,6 @@ function PeterPanParallax() {
 							/>
 						</ParallaxLayer>
 
-						{/* Tree with kidnapped children */}
-						<ParallaxLayer sticky={{ start: 3, end: 6 }} offset={3} speed={0.5} style={{ zIndex: 0, height: "100vh" }}>
-							<img
-								className="horizontal-image tree-kidnapped"
-								src={Tree}
-								alt="Tree"
-								style={{
-									opacity: getHorizontalProgress() > 0.8 ? 1 : 0,
-									transition: "opacity 0.3s ease-out",
-								}}
-							/>
-						</ParallaxLayer>
-
 						<ParallaxLayer offset={5.5} speed={2} style={{ zIndex: 3 }} className="text-animation">
 							<p>"The Lost Boys were kidnapped by the pirates"</p>
 						</ParallaxLayer>
@@ -270,12 +266,12 @@ function PeterPanParallax() {
 							<img className="animation-image-pirates" src={Pirates} alt="Pirates" />
 						</ParallaxLayer>
 
-						<ParallaxLayer offset={5.9} speed={2} style={{ zIndex: 2 }} className="text-animation">
+						<ParallaxLayer offset={6} speed={2} style={{ zIndex: 2 }} className="text-animation">
 							<p>"Captain Hook and Peter Pan fight for the lost boys"</p>
 						</ParallaxLayer>
 
 						{/* Section 6: Sword Fight */}
-						<ParallaxLayer sticky={{ start: 6, end: 6.5 }} offset={6} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer sticky={{ start: 6, end: 6.2 }} offset={6} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={PeterVSHaak} alt="Peter vs Hook" />
 						</ParallaxLayer>
 
@@ -305,40 +301,21 @@ function PeterPanParallax() {
 						</ParallaxLayer>
 
 						{/* Section 7: Peter Pan Saves Everyone */}
-						<ParallaxLayer offset={6.8} speed={2} style={{ zIndex: 2 }} className="text-animation">
+						<ParallaxLayer offset={6.9} speed={2} style={{ zIndex: 2 }} className="text-animation">
 							<p>"Peter Pan saves the lost boys and Wendy"</p>
 						</ParallaxLayer>
 
-						<ParallaxLayer offset={6.8} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={6.9} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={Children} alt="Children" />
 						</ParallaxLayer>
 
 						{/* Section 8: Return to London */}
-						<ParallaxLayer offset={7.5} speed={2} style={{ zIndex: 2 }} className="text-animation">
+						<ParallaxLayer offset={7.2} speed={2} style={{ zIndex: 2 }} className="text-animation">
 							<p>"Together they fly back to London"</p>
 						</ParallaxLayer>
 
-						<ParallaxLayer offset={7.5} speed={1} style={{ zIndex: -1 }}>
+						<ParallaxLayer offset={7.2} speed={1} style={{ zIndex: -1 }}>
 							<img className="animation-layer" src={FlyingShip} alt="Flying Ship" />
-						</ParallaxLayer>
-
-						{/* End Star - Shrinking */}
-						<ParallaxLayer offset={7.8} speed={1} style={{ zIndex: 1 }}>
-							<div className="star-container">
-								<img
-									src={OneStar}
-									alt="End Star"
-									className="shrinking-star"
-									style={{
-										transform: `scale(${getEndStarScale()})`,
-										transition: "transform 0.1s ease-out",
-									}}
-								/>
-							</div>
-						</ParallaxLayer>
-
-						<ParallaxLayer offset={8} speed={1} style={{ zIndex: -1 }}>
-							<img className="animation-layer" src={SterStelsel} alt="Star System End" />
 						</ParallaxLayer>
 					</Parallax>
 				</div>
