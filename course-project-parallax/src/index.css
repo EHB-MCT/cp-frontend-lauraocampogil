@@ -524,7 +524,6 @@ footer {
 }
 
 /* Main Parallax Website */
-
 .parallax-container {
 	width: 100%;
 	height: 100vh;
@@ -553,6 +552,46 @@ footer {
 	object-fit: cover;
 }
 
+/* Moving Peter Pan Animation */
+.moving-peter-pan {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	z-index: 2;
+	will-change: transform;
+}
+
+.peter-pan-moving {
+	width: 150px;
+	height: auto;
+	will-change: transform;
+}
+
+/* Star Animations */
+.star-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.growing-star {
+	width: 200px;
+	height: auto;
+	will-change: transform;
+	transform-origin: center;
+}
+
+.shrinking-star {
+	width: 300px;
+	height: auto;
+	will-change: transform;
+	transform-origin: center;
+}
+
+/* Shadow Scenes */
 .shadow-container {
 	display: flex;
 	justify-content: center;
@@ -563,14 +602,23 @@ footer {
 
 .animation-image-shadow-scene1 {
 	width: 300px;
-	/* Transform will be applied via react state */
 	will-change: transform;
+	margin-left: 200px;
+	margin-top: 100px;
 }
 
+.animation-image-shadow-scene2 {
+	width: 300px;
+	rotate: 70deg;
+	margin-left: -100px;
+}
+
+/* Text Animations */
 .text-animation {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	pointer-events: none;
 }
 
 .text-animation p {
@@ -580,11 +628,118 @@ footer {
 	text-align: center;
 	max-width: 80%;
 	margin: 0 auto;
-	background-color: rgba(0, 0, 0, 0.3);
-	padding: 10px;
-	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 15px 25px;
+	border-radius: 15px;
+	animation: fadeInText 0.8s ease-in-out;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+@keyframes fadeInText {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Island Animation */
+.animation-image-island-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.animation-image-island {
+	width: 500px;
+	height: auto;
+	will-change: transform;
+	cursor: none;
+}
+
+/* Horizontal Scroll Section */
+.horizontal-scroll-container {
+	position: relative;
+	width: 300%;
+	height: 100vh;
+	display: flex;
+}
+
+.horizontal-image {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	will-change: transform;
+}
+
+.magic-forest {
+	left: 0;
+	z-index: 1;
+}
+
+.normal-forest {
+	left: 100vw;
+	z-index: 2;
+}
+
+.tree-kidnapped {
+	left: 200vw;
+	z-index: 3;
+}
+
+/* Lost Boys Animation */
+.animation-image-lostguys {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: auto;
+	z-index: -1;
+	will-change: opacity;
+}
+
+/* Pirates Section */
+.animation-image-pirates {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: auto;
+	z-index: 2;
+}
+
+/* Sword Fight Animations */
+.animation-image-swordpeter {
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	width: 220px;
+	height: auto;
+	will-change: transform;
+	transform-origin: bottom center;
+}
+
+.animation-image-swordhaak {
+	position: absolute;
+	top: 45%;
+	right: 40%;
+	width: 220px;
+	height: auto;
+	will-change: transform;
+	transform-origin: bottom center;
+	transform: scaleX(-1); /* Flip horizontally for Hook's sword */
+}
+
+/* Centered Container Utility */
 .centered-container {
 	display: flex;
 	justify-content: center;
@@ -593,327 +748,45 @@ footer {
 	height: 100%;
 }
 
-.star-image {
-	max-width: 80%;
-	max-height: 80%;
-	will-change: transform;
-}
-
-.animation-image-island {
-	width: 500px;
-	margin-left: 500px;
-	margin-top: 150px;
-	will-change: transform;
-}
-
-.animation-image-shadow-scene2 {
-	width: 300px;
-	rotate: 70deg;
-	margin-left: -100px;
-}
-
-/* Horizontal scroll section styles */
-.horizontal-section {
-	width: 100%;
-	height: 100vh;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	scroll-snap-type: x mandatory;
-	position: relative;
-	white-space: nowrap;
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none; /* IE and Edge */
-}
-
-.horizontal-section::-webkit-scrollbar {
-	display: none; /* Chrome, Safari, Opera */
-}
-
-.horizontal-content {
-	display: inline-flex;
-	height: 100%;
-	width: 300%;
-}
-
-.horizontal-item {
-	flex: 0 0 33.333%;
-	width: 33.333%;
-	height: 100%;
-	scroll-snap-align: start;
-	position: relative;
-}
-
-.background-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.lost-guys-container {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
-	transition: opacity 0.5s ease;
-	z-index: 10;
-}
-
-.lost-guys-image {
-	width: 60%;
-	max-height: 60vh;
-	object-fit: contain;
-}
-
-.animation-image-pirates {
-	width: 55%;
-	margin-left: 300px;
-	margin-top: 200px;
-}
-
-.animation-image-swordpeter {
-	width: 15%;
-	margin-left: 500px;
-	margin-top: 330px;
-}
-
+/* Performance Optimizations */
+.animation-layer,
+.moving-peter-pan,
+.growing-star,
+.shrinking-star,
+.animation-image-island,
+.animation-image-lostguys,
+.horizontal-image,
+.animation-image-swordpeter,
 .animation-image-swordhaak {
-	width: 15%;
-	rotate: 330deg;
-	margin-left: 630px;
-	margin-top: 330px;
+	will-change: transform;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
 }
 
-/* Make sure the horizontal section scrolls */
-.horizontal-section::after {
-	content: "";
-	display: block;
-	min-width: 1px;
-	height: 1px;
-}
-
-/* Auto scroll indicator */
-.scroll-indicator {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	color: white;
-	font-size: 14px;
-	text-align: center;
-	opacity: 0.8;
-	z-index: 10;
-	animation: pulse 2s infinite;
-}
-/* Add this to your PeterPanParallax.css file */
-
-/* Add this to your PeterPanParallax.css file */
-
-/* Simple Horizontal Scene Styles */
-.simple-horizontal-scene {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-}
-
-.forest-scene {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: opacity 1s ease-in-out;
-}
-
-.forest-scene img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.lost-boys-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 10;
-	pointer-events: none;
-	transition: opacity 1s ease-in-out;
-}
-
-.lost-boys-wrapper img {
-	width: 60%;
-	max-width: 500px;
-	max-height: 60vh;
-	object-fit: contain;
-}
-
-.scene-indicators {
-	position: absolute;
-	bottom: 30px;
-	left: 50%;
-	transform: translateX(-50%);
-	display: flex;
-	gap: 10px;
-	z-index: 20;
-}
-
-.scene-dot {
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: none;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.scene-dot.active {
-	background-color: white;
-	transform: scale(1.2);
-}
-/* PeterPanHorizontalParallax.css */
-
-.horizontal-parallax-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: 50;
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 0.5s ease;
-}
-
-.horizontal-parallax-container.active {
-	opacity: 1;
-	pointer-events: auto;
-}
-
-.horizontal-scroll-section {
-	width: 100%;
-	height: 100vh;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-	position: relative;
-	/* Hide scrollbar */
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none; /* IE and Edge */
-	/* Smooth scrolling */
-	scroll-behavior: smooth;
-}
-
-.horizontal-scroll-section::-webkit-scrollbar {
-	display: none; /* Chrome, Safari, Opera */
-}
-
-.horizontal-content {
-	display: inline-flex;
-	width: 300%; /* 3 scenes, each 100% viewport width */
-	height: 100%;
-}
-
-.horizontal-scene {
-	flex: 0 0 33.333%;
-	width: 33.333%;
-	height: 100%;
-	position: relative;
-}
-
-.background-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.lost-guys-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 10;
-	pointer-events: none;
-	transition: opacity 0.8s ease;
-	opacity: 0;
-}
-
-.lost-guys-overlay.visible {
-	opacity: 1;
-}
-
-.lost-guys-overlay.hidden {
-	opacity: 0;
-}
-
-.lost-guys-overlay img {
-	width: 60%;
-	max-height: 60%;
-	object-fit: contain;
-}
-
-.scroll-instruction {
-	position: fixed;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: rgba(0, 0, 0, 0.5);
-	color: white;
-	padding: 10px 20px;
-	border-radius: 20px;
-	font-size: 18px;
-	animation: pulse 2s infinite;
-	z-index: 20;
-}
-
-@keyframes pulse {
-	0% {
-		opacity: 0.6;
+/* Loading Animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
 	}
-	50% {
+	to {
 		opacity: 1;
 	}
-	100% {
-		opacity: 0.6;
-	}
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-	.lost-guys-overlay img {
-		width: 80%;
-	}
-
-	.scroll-instruction {
-		font-size: 14px;
-		padding: 8px 16px;
-	}
-}
-/* Add to your main PeterPanParallax.css file */
-
-/* Horizontal section placeholder */
-.horizontal-placeholder {
-	height: 100vh;
-	width: 100%;
-	background-color: transparent;
+/* Custom Scrollbar */
+.peterpan-parallax::-webkit-scrollbar {
+	width: 8px;
 }
 
-/* Adjust vertical scrolling when horizontal section is active */
-body.horizontal-active {
-	overflow: hidden;
+.peterpan-parallax::-webkit-scrollbar-track {
+	background: rgba(10, 22, 41, 0.5);
+}
+
+.peterpan-parallax::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+}
+
+.peterpan-parallax::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.5);
 }
