@@ -17,3 +17,4 @@ RESOURCES - PROJECT
 12. [Searchbar with searchresults]-(https://claude.ai/chat/76608c43-5542-45ef-9511-f40804fe5187)
 13. [YT VIDEO: Implement yt video in react]-(https://www.youtube.com/watch?v=ulzt8xX-cpI)
 14. [YT VIDEO: How To Deploy A React Vite App To Github Pages]-(https://www.youtube.com/watch?v=hn1IkJk24ow)
+15. [ParallaxLayer] - (https://www.youtube.com/watch?v=UgIwjLg4ONk)
